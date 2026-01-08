@@ -1,108 +1,44 @@
-/* ===============================
-   Global reset & typography
-   =============================== */
-
+/* ======= Global reset ======= */
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
-}
-
-/* ===============================
-   Home page background
-   =============================== */
-
 body.home {
+  margin: 0;
   min-height: 100vh;
-  background-image: url("../images/background.jpg");
-  background-size: cover;          /* zoomed image */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;    /* parallax effect */
+
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 18px; /* base size, everything scales proportionally */
+  font-size: 18px; /* base size for proportional scaling */
+
   color: white;
+
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;          /* zoomed background */
+  background-attachment: fixed;    /* parallax */
 }
 
-/* ===============================
-   Overlay
-   =============================== */
-
+/* ======= Overlay ======= */
 .overlay {
+  position: relative;
   min-height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.55);  /* dark overlay for contrast */
+  background: rgba(0, 0, 0, 0.55);
 
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* ===============================
-   Profile card
-   =============================== */
-
-.profile-card {
-  text-align: center;
-  color: white;
-  max-width: 420px;
+  flex-direction: column; /* center vertically and stack children */
   padding: 20px;
 }
 
-/* ===============================
-   Profile picture
-   =============================== */
-
-.profile-pic {
-  width: 160px;
-  height: 160px;            /* enforce square */
-  object-fit: cover;        /* crop, do not distort */
-  border-radius: 50%;       /* perfect circle */
-  border: 3px solid white;
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-/* ===============================
-   Text styling
-   =============================== */
-
-h1 {
-  font-size: 2.2em;
-  margin: 10px 0;
-}
-
-.title {
-  font-size: 1.2em;
-  font-weight: 300;
-  margin: 5px 0;
-}
-
-.affiliation {
-  font-size: 1em;
-  opacity: 0.9;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 1em;
-  margin-top: 15px;
-  opacity: 0.9;
-  line-height: 1.4;
-}
-
-/* ===============================
-   Navigation links
-   =============================== */
-
+/* ======= Top navigation ======= */
 .top-nav {
   position: absolute;
   top: 20px;
   right: 30px;
+  display: flex;
 }
 
 .top-nav a {
@@ -117,31 +53,70 @@ h1 {
   text-decoration: underline;
 }
 
-/* ===============================
-   Scroll spacer (temporary)
-   =============================== */
-
-.scroll-spacer {
-  height: 120vh;
+/* ======= Profile card ======= */
+.profile-card {
+  text-align: center;
+  max-width: 420px;
+  z-index: 1;
 }
 
-/* ===============================
-   Social links
-   =============================== */
+/* ======= Profile picture ======= */
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: block;
+  margin: 0 auto 20px auto;
+}
 
+/* ======= Text styling ======= */
+h1 {
+  font-size: 2.2em;
+  margin: 10px 0;
+}
+
+.title {
+  font-size: 1.3em; /* larger than description, smaller than name */
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.affiliation {
+  font-size: 1.2em; /* larger than description */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 1em;
+  margin-top: 10px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* ======= Scroll spacer ======= */
+.scroll-spacer {
+  height: 120vh; /* allows scrolling to see parallax effect */
+  width: 100%;
+}
+
+/* ======= Social links at bottom ======= */
 .social-links {
   text-align: center;
-  margin: 50px 0;
-  font-size: 1em;
+  margin: 50px 0 20px 0;
 }
 
 .social-links a {
-  color: white;
-  text-decoration: none;
+  display: inline-block;
   margin: 0 8px;
 }
 
-.social-links a:hover {
-  text-decoration: underline;
+.social-links a img {
+  width: 30px; /* smaller than text */
+  height: 30px;
+  vertical-align: middle;
+  filter: invert(1); /* makes icons white */
 }
 
