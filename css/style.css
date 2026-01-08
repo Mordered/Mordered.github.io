@@ -9,7 +9,6 @@ body.home {
 
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 18px; /* base size for proportional scaling */
-
   color: white;
 
   background-image: url("../images/background.jpg");
@@ -29,7 +28,7 @@ body.home {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* center vertically and stack children */
+  flex-direction: column;
   padding: 20px;
 }
 
@@ -39,6 +38,7 @@ body.home {
   top: 20px;
   right: 30px;
   display: flex;
+  z-index: 10;
 }
 
 .top-nav a {
@@ -53,11 +53,20 @@ body.home {
   text-decoration: underline;
 }
 
+/* ======= Centered content container ======= */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* vertically center content */
+  width: 70%; /* increase horizontal space */
+  max-width: 700px;
+  z-index: 1;
+}
+
 /* ======= Profile card ======= */
 .profile-card {
   text-align: center;
-  max-width: 420px;
-  z-index: 1;
 }
 
 /* ======= Profile picture ======= */
@@ -78,13 +87,13 @@ h1 {
 }
 
 .title {
-  font-size: 1.3em; /* larger than description, smaller than name */
+  font-size: 1.3em;
   font-weight: bold;
   margin: 5px 0;
 }
 
 .affiliation {
-  font-size: 1.2em; /* larger than description */
+  font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -96,27 +105,34 @@ h1 {
   line-height: 1.4;
 }
 
-/* ======= Scroll spacer ======= */
-.scroll-spacer {
-  height: 120vh; /* allows scrolling to see parallax effect */
-  width: 100%;
-}
-
-/* ======= Social links at bottom ======= */
-.social-links {
+/* ======= Contact section ======= */
+.contact-section {
   text-align: center;
-  margin: 50px 0 20px 0;
+  margin-top: 30px;
 }
 
+.contact-title {
+  font-size: 1.05em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* ======= Social links ======= */
 .social-links a {
   display: inline-block;
   margin: 0 8px;
 }
 
 .social-links a img {
-  width: 30px; /* smaller than text */
-  height: 30px;
+  width: 28px;
+  height: 28px;
   vertical-align: middle;
-  filter: invert(1); /* makes icons white */
+  filter: invert(1); /* white icons */
+}
+
+/* ======= Scroll spacer ======= */
+.scroll-spacer {
+  height: 120vh;
+  width: 100%;
 }
 
