@@ -23,6 +23,9 @@ body.home {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;    /* parallax effect */
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px; /* base size, everything scales proportionally */
+  color: white;
 }
 
 /* ===============================
@@ -85,19 +88,32 @@ h1 {
   margin-bottom: 20px;
 }
 
+.description {
+  font-size: 1em;
+  margin-top: 15px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
 /* ===============================
    Navigation links
    =============================== */
 
-nav a {
+.top-nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.top-nav a {
   color: white;
   text-decoration: none;
-  margin: 0 12px;
+  margin-left: 20px;
   font-weight: 500;
   font-size: 1.05em;
 }
 
-nav a:hover {
+.top-nav a:hover {
   text-decoration: underline;
 }
 
@@ -107,5 +123,25 @@ nav a:hover {
 
 .scroll-spacer {
   height: 120vh;
+}
+
+/* ===============================
+   Social links
+   =============================== */
+
+.social-links {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 1em;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }
 
