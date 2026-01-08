@@ -1,73 +1,111 @@
-body.home {
+/* ===============================
+   Global reset & typography
+   =============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: url("../images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: white;
+  line-height: 1.5;
 }
+
+/* ===============================
+   Home page background
+   =============================== */
+
+body.home {
+  min-height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;          /* zoomed image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;    /* parallax effect */
+}
+
+/* ===============================
+   Overlay
+   =============================== */
 
 .overlay {
-  background: rgba(0, 0, 0, 0.55);
   min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);  /* dark overlay for contrast */
+
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 40px;
 }
+
+/* ===============================
+   Profile card
+   =============================== */
 
 .profile-card {
-  max-width: 400px;
+  text-align: center;
+  color: white;
+  max-width: 420px;
+  padding: 20px;
 }
+
+/* ===============================
+   Profile picture
+   =============================== */
 
 .profile-pic {
-  width: 150px;
-  border-radius: 50%;
+  width: 160px;
+  height: 160px;            /* enforce square */
+  object-fit: cover;        /* crop, do not distort */
+  border-radius: 50%;       /* perfect circle */
   border: 3px solid white;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
+/* ===============================
+   Text styling
+   =============================== */
+
 h1 {
-  margin-top: 20px;
   font-size: 2.2em;
+  margin: 10px 0;
 }
 
 .title {
   font-size: 1.2em;
   font-weight: 300;
+  margin: 5px 0;
 }
 
 .affiliation {
   font-size: 1em;
   opacity: 0.9;
+  margin-bottom: 20px;
 }
 
-nav {
-  margin-top: 20px;
-}
+/* ===============================
+   Navigation links
+   =============================== */
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
+  margin: 0 12px;
+  font-weight: 500;
+  font-size: 1.05em;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-#simulation-container {
-  width: 400px;
-  height: 300px;
-}
-.content {
-  max-width: 800px;
-  margin: 50px auto;
-  color: #222;
-  background: white;
-  padding: 40px;
-  border-radius: 8px;
+/* ===============================
+   Scroll spacer (temporary)
+   =============================== */
+
+.scroll-spacer {
+  height: 120vh;
 }
 
-.publications li {
-  margin-bottom: 20px;
-}
