@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+
+  <div class="overlay">
+    <div class="profile-card">
+      <img src="images/profile.jpg" alt="Profile photo" class="profile-pic">
+
+      <h1>Your Name</h1>
+      <p class="title">Researcher in Fluid Dynamics</p>
+      <p class="affiliation">Your Institution</p>
+
+      <nav>
+        <a href="publications.html">Publications</a>
+        <a href="research.html">Research</a>
+      </nav>
+    </div>
+
+    <!-- Optional simulation -->
+    <div id="simulation-container">
+      <canvas id="kolmogorov-canvas"></canvas>
+    </div>
+  </div>
+
+  <script src="js/kolmogorov.js"></script>
+</body>
+</html>
+
