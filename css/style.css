@@ -176,41 +176,55 @@ h1 {
 /* ============================= */
 /* Publications page styling     */
 /* ============================= */
+/* ============================= */
+/* Publications page styling     */
+/* ============================= */
 
-/* Top band navigation */
+/* ---------- Top band with background slice ---------- */
 .top-band {
+  position: relative;
+  height: 120px;
+  background-image: url("../images/background.jpg"); /* same as main page */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
-  background: white;
+  padding: 0 2rem;
 }
 
-.top-band nav a {
-  margin-left: 1.5rem;
-  font-size: 1.05rem;
-  font-weight: 700; /* bold Research link */
+/* Home icon link (left) */
+.home-link {
+  font-size: 1.3rem;
   text-decoration: none;
-  color: #111;
+  color: white;
+}
+
+.home-link img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1);
+}
+
+/* Top-right navigation (Research) */
+.top-band nav a {
+  font-size: 1.05rem;
+  font-weight: 700; /* bold */
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
 }
 
 .top-band nav a:hover {
   text-decoration: underline;
 }
 
-/* Home icon link */
-.home-link {
-  font-size: 1.3rem;
-  color: #111;
-  text-decoration: none;
-}
-
-/* Publications container */
+/* ---------- Publications container ---------- */
 .publications {
   max-width: 900px;
   margin: 3rem auto;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   background: white;
 }
 
@@ -221,18 +235,17 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* DL list reset */
+/* ---------- BibTeX DL list styling ---------- */
 .publications dl {
   margin: 0;
   padding: 0;
 }
 
-/* Individual publications */
 .publications dd {
   position: relative;
-  margin: 0 0 1.5rem 2rem; /* SPACE BETWEEN ENTRIES */
+  margin: 0 0 1.5rem 2rem; /* space between entries */
   padding-left: 1rem;
-  font-size: 1.1rem;       /* LARGER FONT */
+  font-size: 1.1rem;       /* slightly larger font */
   line-height: 1.6;
   text-align: justify;
 }
@@ -246,3 +259,5 @@ h1 {
   font-size: 1.4rem;
   line-height: 1;
 }
+
+
