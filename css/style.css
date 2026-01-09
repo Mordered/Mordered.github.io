@@ -173,16 +173,16 @@ h1 {
 }
 
 
-/* ========================================== */
-/* =============== PUBLICATIONS ============= */
-/* ===== Publications page ===== */
+/* =========================================================
+   Publications page
+   ========================================================= */
 
 .publications-page {
   background: white;
   color: #111;
 }
 
-/* Top image band */
+/* ---------- Top band ---------- */
 .top-band {
   position: relative;
   height: 120px;
@@ -193,16 +193,24 @@ h1 {
 
   border-bottom: 1px solid rgba(0,0,0,0.15);
 }
+
 /* Home icon (left) */
 .home-link {
   position: absolute;
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
+}
 
-  font-size: 1.8em;
-  text-decoration: none;
-  color: white;
+.home-link img {
+  width: 26px;
+  height: 26px;
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+.home-link img:hover {
+  opacity: 1;
 }
 
 /* Top-right navigation */
@@ -215,33 +223,51 @@ h1 {
 
 .top-band .top-nav a {
   color: white;
-  margin-left: 20px;
-  font-weight: 500;
+  margin-left: 24px;
+
+  font-size: 1.05em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
   text-decoration: none;
 }
 
 .top-band .top-nav a:hover {
   text-decoration: underline;
 }
-/* Publications container */
+
+/* ---------- Main content ---------- */
 .pubs-container {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
-/* Title */
 .pubs-title {
   text-align: center;
   font-size: 2.2em;
   margin-bottom: 40px;
 }
 
-/* Publications list */
+/* ---------- BibTeX-generated list ---------- */
 .pubs-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pubs-list dl {
+  margin: 0;
+}
+
+.pubs-list dt {
+  display: none; /* hide BibTeX keys */
+}
+
+.pubs-list dd {
+  margin: 0 0 22px 0;
   text-align: justify;
-  font-size: 1.05em;
   line-height: 1.6;
+  font-size: 1.05em;
 }
 
 
