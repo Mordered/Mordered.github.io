@@ -280,7 +280,7 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* Each row */
+/* Each row (3 rows total) */
 .research-row {
   display: flex;
   flex-direction: row;
@@ -288,41 +288,33 @@ h1 {
   margin-bottom: 3rem;
 }
 
-/* Left column (animation or image) */
+/* Left column (animation or static image) */
 .research-left {
-  flex: 0 0 40%;
-  margin-right: 2rem;
+  flex: 0 0 40%;        /* 40% of row width */
+  margin-right: 2rem;   /* spacing between columns */
   text-align: center;
 }
 
-/* Canvas inside left column */
-.research-left canvas {
-  width: 100%;     /* fill column width */
-  height: auto;    /* keep aspect ratio */
+/* Images (including animations) inside left column */
+.research-left img {
+  width: 100%;    /* scale to column width */
+  height: auto;   /* maintain aspect ratio */
   display: block;
-  border: 1px solid #ccc; /* optional frame */
+  border: 1px solid #ccc;  /* optional frame around image/animation */
   margin-bottom: 0.5rem;
 }
 
-/* Caption below canvas */
+/* Caption below image/animation */
 .research-left .caption {
   font-style: italic;
   font-size: 0.9rem;
   text-align: center;
 }
 
-/* Right column (text) */
+/* Right column (text description) */
 .research-right {
-  flex: 0 0 60%;
+  flex: 0 0 60%;   /* 60% of row width */
   text-align: justify;
-}
-
-/* Row divider */
-.research-divider {
-  width: 60%; /* shorter than page width */
-  margin: 3rem auto;
-  border: none;
-  border-top: 2px solid #ccc;
 }
 
 /* Right column titles */
@@ -330,6 +322,14 @@ h1 {
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+/* Horizontal row divider */
+.research-divider {
+  width: 60%;      /* shorter than page width but wider than text */
+  margin: 3rem auto;
+  border: none;
+  border-top: 2px solid #ccc;
 }
 
 
