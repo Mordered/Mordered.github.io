@@ -371,4 +371,14 @@ h1 {
   border-top: 2px solid #ccc;
 }
 
+.research-right a {
+  color: #1a5fb4;        /* academic blue */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.research-right a:hover {
+  text-decoration: underline;
+}
+
 
