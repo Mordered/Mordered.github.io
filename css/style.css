@@ -151,7 +151,7 @@ h1 {
 .flow-container {
   width: 100%;
   max-width: 720px;
-  height: 360px;
+  aspect-ratio: 1/1;
   margin: 30px auto;
 
   background: #0b0f14;
@@ -167,7 +167,7 @@ h1 {
 }
 
 #kolmogorov-frame {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
 }
