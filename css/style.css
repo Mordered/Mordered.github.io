@@ -173,125 +173,76 @@ h1 {
 }
 
 
-/* =========================================================
-   Publications page
-   ========================================================= */
+/* ============================= */
+/* Publications page styling     */
+/* ============================= */
 
-.publications-page {
+/* Top band navigation */
+.top-band {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
   background: white;
+}
+
+.top-band nav a {
+  margin-left: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 700; /* bold Research link */
+  text-decoration: none;
   color: #111;
 }
 
-/* ---------- Top band ---------- */
-.top-band {
-  position: relative;
-  height: 120px;
-
-  background-image: url("../images/background.jpg");
-  background-size: cover;
-  background-position: center;
-
-  border-bottom: 1px solid rgba(0,0,0,0.15);
-}
-
-/* Home icon (left) */
-.home-link {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.home-link img {
-  width: 26px;
-  height: 26px;
-  filter: invert(1);
-  opacity: 0.9;
-}
-
-.home-link img:hover {
-  opacity: 1;
-}
-
-/* Top-right navigation */
-.top-band .top-nav {
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.top-band .top-nav a {
-  color: white;
-  margin-left: 24px;
-
-  font-size: 1.05em;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-
-  text-decoration: none;
-}
-
-.top-band .top-nav a:hover {
+.top-band nav a:hover {
   text-decoration: underline;
 }
 
-
-/* ---------- Main content ---------- */
-.pubs-container {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 0 20px;
+/* Home icon link */
+.home-link {
+  font-size: 1.3rem;
+  color: #111;
+  text-decoration: none;
 }
 
-.pubs-title {
+/* Publications container */
+.publications {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  background: white;
+}
+
+/* Title */
+.publications h1 {
   text-align: center;
-  font-size: 2.2em;
-  margin-bottom: 40px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-/* ---------- BibTeX-generated list ---------- */
-.pubs-list {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.pubs-list dl {
-  margin: 0;
-}
-
-.pubs-list dt {
-  display: none; /* hide BibTeX keys */
-}
-
-.pubs-list dd {
-  margin: 0 0 22px 0;
-  text-align: justify;
-  line-height: 1.6;
-  font-size: 1.05em;
-}
-
-/* Publications list */
+/* DL list reset */
 .publications dl {
-  max-width: 900px;
-  margin: 2rem auto;
+  margin: 0;
   padding: 0;
 }
 
+/* Individual publications */
 .publications dd {
-  margin: 0 0 1.2rem 1.5rem;   /* space between entries */
-  padding-left: 1rem;
   position: relative;
+  margin: 0 0 1.5rem 2rem; /* SPACE BETWEEN ENTRIES */
+  padding-left: 1rem;
+  font-size: 1.1rem;       /* LARGER FONT */
   line-height: 1.6;
   text-align: justify;
 }
 
-/* Custom bullet */
+/* Bullet point */
 .publications dd::before {
   content: "•";
   position: absolute;
-  left: -1.2rem;
+  left: -1.5rem;
   top: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1;
 }
-
