@@ -11,7 +11,7 @@
   // Generate file names 0014.jpg -> 0199.jpg
   const frames = [];
   for (let i = 14; i <= 199; i++) {
-    const numStr = i.toString().padStart(4, '0'); // 0014, 0015, ...
+    const numStr = i.toString().padStart(5, '0'); // 0014, 0015, ...
     frames.push(`/images/pipe/${numStr}.jpg`);
   }
 
