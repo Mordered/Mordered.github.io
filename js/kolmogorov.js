@@ -13,8 +13,8 @@ let u = new Float32Array(NX * NY);
 let v = new Float32Array(NX * NY);
 
 // Parameters
-const dt = 0.03;
-const nu = 0.0008;
+const dt = 0.01;
+const nu = 0.01;
 const forcingK = 4;
 const forcingAmp = 0.08;
 
