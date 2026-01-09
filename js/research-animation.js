@@ -8,46 +8,48 @@
 
   const ctx = canvas.getContext("2d");
 
-  // Generate file names 0014.jpg -> 0199.jpg
+  // Generate file names 00014.jpg -> 00199.jpg
   const frames = [];
   for (let i = 14; i <= 199; i++) {
-    const numStr = i.toString().padStart(5, '0'); // 0014, 0015, ...
+    const numStr = i.toString().padStart(5, '0'); // 00014, 00015, ...
     frames.push(`/images/pipe/${numStr}.jpg`);
   }
 
-  let images = [];
+  const images = [];
   let loaded = 0;
 
-  // Load all images
   frames.forEach((src, idx) => {
     const img = new Image();
     img.src = src;
     img.onload = () => {
       loaded++;
-      if (loaded === frames.length) {
-        startAnimation();
-      }
+      // Start animation when first image is loaded (do not wait for all)
+      if (loaded === 1) startAnimation();
+    };
+    img.onerror = () => {
+      console.error("Failed to load:", src);
     };
     images.push(img);
   });
 
-  // Animation settings
   let currentFrame = 0;
   const fps = 15;
   let width, height;
 
   function startAnimation() {
-    // Set canvas width to container width, keep aspect ratio from first image
+    // Set canvas width = parent column width
     width = canvas.parentElement.clientWidth;
-    const aspect = images[0].height / images[0].width;
+    const aspect = images[0].naturalHeight / images[0].naturalWidth;
     height = width * aspect;
     canvas.width = width;
     canvas.height = height;
 
     setInterval(() => {
-      ctx.clearRect(0, 0, width, height);
-      ctx.drawImage(images[currentFrame], 0, 0, width, height);
-      currentFrame = (currentFrame + 1) % images.length;
+      if (images[currentFrame].complete) {
+        ctx.clearRect(0, 0, width, height);
+        ctx.drawImage(images[currentFrame], 0, 0, width, height);
+        currentFrame = (currentFrame + 1) % images.length;
+      }
     }, 1000 / fps);
   }
 
