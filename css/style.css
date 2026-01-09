@@ -262,7 +262,7 @@ h1 {
 
 
 /* ============================= */
-/* Research page layout          */
+/* Research page styling         */
 /* ============================= */
 
 /* Main content container */
@@ -297,8 +297,8 @@ h1 {
 
 /* Canvas inside left column */
 .research-left canvas {
-  width: 100%;
-  height: auto;
+  width: 100%;     /* fill column width */
+  height: auto;    /* keep aspect ratio */
   display: block;
   border: 1px solid #ccc; /* optional frame */
   margin-bottom: 0.5rem;
