@@ -2,78 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Main Lines of Research</title>
+  <title>Research</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- ===== Top banner with background slice ===== -->
-  <header class="top-band">
+  <!-- TOP BAND (same as publications) -->
+  <div class="top-band">
+    <div class="top-band-content">
+      <a href="index.html" class="home-link">
+        <img src="icons/home-outline.svg" alt="Home">
+      </a>
 
-    <!-- Home icon -->
-    <a href="index.html" class="home-link" title="Home">
-      <img src="images/icons/home.svg" alt="Home">
-    </a>
+      <a href="publications.html" class="top-link">Publications</a>
+    </div>
+  </div>
 
-    <!-- Top-right navigation -->
-    <nav>
-      <a href="publications.html">Publications</a>
-    </nav>
-
-  </header>
-
-  <!-- ===== Main content ===== -->
+  <!-- MAIN BODY -->
   <main class="research">
 
     <h1 class="research-title">Main lines of research</h1>
 
-    <div class="research-rows">
+    <!-- ===== ROW 1 ===== -->
+    <div class="research-row">
 
-      <!-- Row 1 -->
-      <div class="research-row" id="row1">
-  <div class="research-left" id="row1-left">
-    <!-- Image element for animation -->
-    <img id="pipe-frame" src="images/pipe/00014.jpg" alt="Pipe flow animation">
-    <div class="caption">Flow in a pipe experiment (frames 00014-00199)</div>
-  </div>
-  <div class="research-right" id="row1-right">
-    <h2>Title 1</h2>
-    <p>Description of first research line.</p>
-  </div>
-</div>
+      <!-- LEFT: VIDEO -->
+      <div class="research-left">
+        <video
+          class="research-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          controls
+        >
+          <source src="videos/Video_Reduced1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
 
-      <hr class="research-divider">
-
-      <!-- Row 2 -->
-      <div class="research-row" id="row2">
-        <div class="research-left" id="row2-left">
-          <!-- Animation placeholder -->
-        </div>
-        <div class="research-right" id="row2-right">
-          <h2>Title 2</h2>
-          <p>Description of second research line.</p>
+        <div class="caption">
+          Pipe flow experiment: time-resolved visualization
         </div>
       </div>
 
-      <hr class="research-divider">
-
-      <!-- Row 3 -->
-      <div class="research-row" id="row3">
-        <div class="research-left" id="row3-left">
-          <!-- Image placeholder -->
-        </div>
-        <div class="research-right" id="row3-right">
-          <h2>Title 3</h2>
-          <p>Description of third research line.</p>
-        </div>
+      <!-- RIGHT: TEXT -->
+      <div class="research-right">
+        <h2>Pipe flow dynamics</h2>
+        <p>
+          Description of the research line. This text is justified and explains
+          the physics, methods, and relevance of the study in a professional tone.
+        </p>
       </div>
 
     </div>
 
-  </main>
+    <hr class="research-divider">
 
-  <!-- JS for animations -->
-  <script src="js/research-animations.js"></script>
+    <!-- Rows 2 and 3 will follow the same structure -->
+
+  </main>
 
 </body>
 </html>
