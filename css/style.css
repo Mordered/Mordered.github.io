@@ -260,11 +260,12 @@ h1 {
   line-height: 1;
 }
 
+
 /* ============================= */
-/* Research page styling         */
+/* Research page layout          */
 /* ============================= */
 
-/* Main content */
+/* Main content container */
 .research {
   max-width: 1000px;
   margin: 3rem auto;
@@ -272,7 +273,7 @@ h1 {
   background: white;
 }
 
-/* Title */
+/* Page title */
 .research-title {
   text-align: center;
   font-size: 2rem;
@@ -289,46 +290,45 @@ h1 {
 
 /* Left column (animation or image) */
 .research-left {
-  flex: 0 0 40%; /* 40% width */
+  flex: 0 0 40%;
   margin-right: 2rem;
+  text-align: center;
+}
+
+/* Canvas inside left column */
+.research-left canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc; /* optional frame */
+  margin-bottom: 0.5rem;
+}
+
+/* Caption below canvas */
+.research-left .caption {
+  font-style: italic;
+  font-size: 0.9rem;
   text-align: center;
 }
 
 /* Right column (text) */
 .research-right {
-  flex: 0 0 60%; /* 60% width */
+  flex: 0 0 60%;
   text-align: justify;
 }
 
 /* Row divider */
 .research-divider {
-  width: 60%; /* shorter than page width, wider than text */
+  width: 60%; /* shorter than page width */
   margin: 3rem auto;
   border: none;
   border-top: 2px solid #ccc;
-}
-
-/* Left column captions */
-.research-left .caption {
-  font-style: italic;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  text-align: center;
 }
 
 /* Right column titles */
 .research-right h2 {
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Make canvas fit column width, maintain aspect ratio */
-.research-left canvas {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid #ccc; /* optional, frames the animation */
   margin-bottom: 0.5rem;
 }
 
