@@ -1,8 +1,8 @@
 const canvas = document.getElementById("kolmogorov-canvas");
 const ctx = canvas.getContext("2d");
 
-const NX = 120;
-const NY = 80;
+const NX = 128;
+const NY = 128;
 
 canvas.width = NX;
 canvas.height = NY;
