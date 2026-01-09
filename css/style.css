@@ -382,3 +382,49 @@ h1 {
 }
 
 
+/* ============================= */
+/* Mobile responsiveness         */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Top band */
+  .top-band {
+    height: 70px;
+  }
+
+  .top-link {
+    font-size: 1rem;
+  }
+
+  /* Research rows stack vertically */
+  .research-row {
+    flex-direction: column;
+  }
+
+  .research-left,
+  .research-right {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+
+  /* Reduce video/image size margins */
+  .research-left img,
+  .research-video {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Publications list spacing */
+  .publications-list li {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Main page card width */
+  .profile-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+
