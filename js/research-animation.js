@@ -3,15 +3,19 @@
 // ==========================
 const pipeImg = document.getElementById("pipe-frame");
 
-const totalFrames = 186; // 00014 -> 00199
-let frame = 14;
+let frame = 14;           // start frame
+const totalFrames = 186;  // 00014 -> 00199
+const fps = 15;           // frames per second
 
 function animatePipe() {
-  const numStr = String(frame).padStart(5, "0"); // 00014, 00015, ...
+  // pad number to 5 digits: 00014, 00015, ...
+  const numStr = String(frame).padStart(5, '0');
   pipeImg.src = `images/pipe/${numStr}.jpg`;
+
   frame++;
   if (frame > 199) frame = 14; // loop back
 }
 
-setInterval(animatePipe, 66); // ~15 FPS
+// call every 1000/fps milliseconds
+setInterval(animatePipe, 1000 / fps);
 
