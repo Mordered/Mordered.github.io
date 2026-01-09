@@ -25,10 +25,18 @@
         <img src="images/IMG_5710.jpg" alt="Profile photo" class="profile-pic">
         <h1>Daniel Morón</h1>
         <p class="title">Post-Doc researcher in Fluid Dynamics</p>
-        <p class="affiliation">Center of applied space technology and microgravity, University of Bremen, Germany</p>
+        <p class="affiliation">Center of Applied Space Technology and Microgravity (ZARM), University of Bremen, Germany</p>
         <p class="description">I studied Aerospace Engineering (both Bachelor and Master) at Universidad Carlos III de Madrid. During my studies I collaborated with the Computational Fluid Dynamics Lab under the supervision of Prof. Oscar FLores and Prof. Manuel García Villalba (now in TU Wien). After my studies, I moved to Germany and completed my PhD on transition to turbulence of pulsatile pipe flows under the supervision of Prof. Marc Avila in Bremen, where I still work as a Post-doc researcher. My research focuses on the fundamental study of turbulent flows. In particular my interest lays on: the mechanisms by which laminar flows transition to turbulence; and on the predictability of extreme events, control and the development of reduced-order models of turbulent flows. I use computer codes to numerically integrate the Navier-Stokes equations and simulate the behaviour of fluid flows. My strategy is to, instead of attempting to perform big and expensive simulations, perform massive ensembles of small, but yet very informative, simulations to correctly characterize the inherent uncertainty of turbulent flows.
         </p>
     </div>
+    <!-- Separator -->
+    <hr class="section-divider">
+    <!-- Kolmogorov flow animation -->
+    <div class="flow-container">
+      <canvas id="kolmogorov-canvas"></canvas>
+    </div>
+    <!-- Separator -->
+    <hr class="section-divider">
     <!-- Contact section -->
     <div class="contact-section">
      <p class="contact-title">Contact me!</p>
@@ -51,6 +59,8 @@
 
 
   </div>
+  <!-- Kolmogorov flow animation script -->
+  <script src="js/kolmogorov.js"></script>
 
 </body>
 </html>

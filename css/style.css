@@ -61,7 +61,7 @@ body.home {
   justify-content: flex-start; /* vertically center content */
   width: 80%; /* increase horizontal space */
   max-width: 900px;
-  margin-top: 120px; /* push profile card down from top */
+  margin-top: 360px; /* push profile card down from top */
   z-index: 1;
 }
 
@@ -101,7 +101,7 @@ h1 {
 }
 
 .description {
-  font-size: 1em;
+  font-size: 0.8em;
   margin-top: 10px;
   opacity: 0.9;
   line-height: 1.4;
@@ -139,3 +139,27 @@ h1 {
   width: 100%;
 }
 
+.section-divider {
+  width: 100%;
+  max-width: 700px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  margin: 30px auto;
+}
+
+.flow-container {
+  width: 100%;
+  max-width: 700px;
+  height: 260px;
+  margin: 20px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#kolmogorov-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
