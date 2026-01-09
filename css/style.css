@@ -262,6 +262,49 @@ h1 {
 
 
 /* ============================= */
+/* Top band (shared pages)       */
+/* ============================= */
+
+.top-band {
+  height: 90px;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.top-band-content {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-link img {
+  height: 28px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.home-link img:hover {
+  opacity: 1;
+}
+
+.top-link {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.top-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
 /* Research page styling         */
 /* ============================= */
 
@@ -291,8 +334,9 @@ h1 {
   text-align: center;
 }
 
-/* Video styling */
-.research-video {
+/* Video and images */
+.research-video,
+.research-left img {
   width: 100%;
   height: auto;
   display: block;
