@@ -4,18 +4,16 @@
 const pipeImg = document.getElementById("pipe-frame");
 
 let frame = 14;           // start frame
-const totalFrames = 186;  // 00014 -> 00199
-const fps = 15;           // frames per second
+const lastFrame = 199;
 
 function animatePipe() {
-  // pad number to 5 digits: 00014, 00015, ...
-  const numStr = String(frame).padStart(5, '0');
-  pipeImg.src = `images/pipe/${numStr}.jpg`;
+  const numStr = String(frame).padStart(5, '0');  // 00014, 00015, ...
+  // add cache buster
+  pipeImg.src = `images/pipe/${numStr}.jpg?cb=${Date.now()}`;
 
   frame++;
-  if (frame > 199) frame = 14; // loop back
+  if (frame > lastFrame) frame = 14;  // loop back
 }
 
-// call every 1000/fps milliseconds
-setInterval(animatePipe, 1000 / fps);
+setInterval(animatePipe, 50);
 
